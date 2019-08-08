@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resource/css/main.css">
+    <link rel="stylesheet" href="resource/css/bootstrap.css">
+    <title>Editor</title>
+</head>
+
+<body onload="initial()">
+    <header>
+        <p class="logo">Rupkotha</p>
+        <div class="d-flex justify-content-between">
+            <span>
+                <a href="index.html" class="btn btn-outline-primary"><b>Home</b></a>
+                <a href="mailto:rupkotha@protonmail.com" class="btn btn-outline-primary"><b>Request New Book</b></a></span>
+
+            <span>
+            </span>
+            <span>
+                <!-- <a href="editor.html" class="btn btn-danger" id="editor-button">Editor</a> -->
+                <a href="#" class="btn btn-outline-primary" id="profile-button"><b>Profile</b></a>
+                <a href="index.html" class="btn btn-outline-primary" id="logout-button" onclick="logout()"><b>Log
+                        out</b></a>
+
+                <span id="login-header">
+                    <a href="login.html" class="btn btn-outline-primary" id="login-button"><b>Log in</b></a>
+                    <a href="registration.html" class="btn btn-outline-primary" id="registration-button"><b>
+                            Registration</b></a></span>
+            </span>
+
+        </div>
+    </header>
+
+
+
+    <section class="d-flex justify-content-between">
+        <aside id="aside-left">
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control text-center alert-secondary">Page Details</b>
+            </div>
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Book ID :</b>
+                <input type="text" value="" class="form-control" id="bookid-table" placeholder="Book ID" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Page</b>
+                <input type="text" value="" class="form-control" id="page-table" placeholder="Page" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Version</b>
+                <input type="text" value="" class="form-control" id="version-table" placeholder="version" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Proof</b>
+                <input type="text" value="" class="form-control" id="proof-table" placeholder="Proof" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Format</b>
+                <input type="text" value="" class="form-control" id="format-table" placeholder="Format" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Volunteer</b>
+                <input type="text" value="" class="form-control" id="volunteer-table" placeholder="Volunteer" readonly>
+            </div>
+
+            <div class="input-group mb-3 col-sm-9">
+                <b class="form-control">Image </b>
+                <a href="" class="form-control" id="page-image-table" target="_blank">Link</a>
+            </div>
+        </aside>
+
+
+        <nav id="nav-middle" hidden>
+            <div class="input-group mb-3 col-12">
+                <b class="form-control text-center alert-danger text">Some Incompleted Pages</b>
+            </div>
+
+            <div class="input-group mb-3 col-12">
+                <b class="form-control">Book ID :</b>
+                <input type="number" value="" class="form-control" placeholder="Book ID" id="bookid-nav">
+                <div class="input-group-append">
+                    <button class="btn btn-primary disabled" id="newTask-button" onclick="newTask()">New Task</button>
+                </div>
+            </div>
+
+            <div class="input-group mb-3 col-12" hidden>
+                <div class="btn-group" role="group">
+                    <button type="button" id="oneid" class="btn btn-secondary active" onclick="onePage()">One</button>
+                    <button type="button" id="twoid" class="btn btn-secondary" onclick="twoPage()">Two</button>
+                    <button type="button" id="threeid" class="btn btn-secondary" onclick="threePage()">Three</button>
+                    <button type="button" id="fourid" class="btn btn-secondary" onclick="fourPage()">Four</button>
+                    <button type="button" id="fiveid" class="btn btn-secondary" onclick="fivePage()">Five</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning" disabled>
+                        >>Result <span class="badge badge-light">20%</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <aside id="aside-right">
+            <aside id="aside-right">
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control text-center alert-secondary">Book Details</b>
+                </div>
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Book ID :</b>
+                    <input type="text" value="" class="form-control" id="bookid-table-right" placeholder="Book ID"
+                        readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Book</b>
+                    <input type="text" value="" class="form-control" id="bookname-table" placeholder="Book Name"
+                        readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Writer</b>
+                    <input type="text" value="" class="form-control" id="writer-table" placeholder="Writer" readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Total Pages</b>
+                    <input type="text" value="" class="form-control" id="totalpages-table" placeholder="Total Pages"
+                        readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Formated</b>
+                    <input type="text" value="" class="form-control" id="formatedpages-table" placeholder="Formatted"
+                        readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Proofed</b>
+                    <input type="text" value="" class="form-control" id="proofedpages-table" placeholder="Proofed"
+                        readonly>
+                </div>
+
+                <div class="input-group mb-3 col-sm-9">
+                    <b class="form-control">Completed</b>
+                    <input type="text" value="" class="form-control" id="completed-table" placeholder="Completed"
+                        readonly>
+                </div>
+            </aside>
+    </section>
+
+
+    <section>
+        <div class="input-group mb-3 col-sm-11 d-flex justify-content-center">
+
+            <b class="form-control">Book ID</b>
+            <input type="number" value="" class="form-control" placeholder="Book ID" id="go-bookid" readonly>
+
+            <b class="form-control">Page</b>
+            <input type="tel" value="" class="form-control" placeholder="Page" id="go-page">
+
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="goPage()">GO</button>
+            </div>
+        </div>
+
+        <div class="input-group mb-3 col-12 d-flex justify-content-center">
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="previousPage()">Previous Page</button>
+                <button class="btn btn-info" onclick="nextPage()">Next Page</button>
+                <button class="btn btn-primary" onclick="incompletedPage()">Next Incompleted Page</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <main>
+        <table>
+            <thead>
+                <th>Text</th>
+                <th>Image</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <textarea name="text" id="textid" cols="80" rows="15" wrap="soft" spellcheck="on"></textarea>
+                    </td>
+                    <td>
+                        <iframe src="" id="imageid" alt="Page Image" height="400" width="800"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="d-flex justify-content-between">
+        <div id="footer-div-left">
+            <b class="form-check-label"> I did </b>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="proof" id="proof-checkbox"
+                    onclick="checkSubmit()">
+                <label class="form-check-label">Proof</label>
+
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="format" id="format-checkbox"
+                    onclick="checkSubmit()">
+                <label class="form-check-label">Format</label>
+            </div>
+            <button type="submit" class="btn btn-success" id="submit-button" onclick="update()" disabled>UPDATE</button>
+        </div>
+
+        <div id="footer-div-right">
+
+            <div class="input-group mb-3">
+                <b class="form-control">Version</b>
+                <input type="number" value="" class="form-control" placeholder="Version" id="go-version">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" id="version-button" onclick="goVersion()">GO</button>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary" onclick="getLatest()">Last Edited</button>
+                <button type="submit" class="btn btn-warning" onclick="getFilter()">Filter Text</button>
+                <button type="submit" class="btn btn-warning" onclick="getRaw()">Raw Text</button>
+                <button type="submit" class="btn btn-danger" onclick="clearTextArea()">Clear</button>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
+    <script src="resource/javascript/main.js"></script>
+</body>
+
+</html>

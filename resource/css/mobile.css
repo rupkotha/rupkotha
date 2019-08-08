@@ -1,0 +1,44 @@
+body {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+aside,
+nav,
+section {
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    background-color: blue;
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.volunteer-table,
+.bestvolunteer-table {
+    color: red;
+    font-weight: bold;
+}
+
+#login-header {
+    display: none;
+}
+
+.form-check {
+    margin-left: 30px;
+}
+
+footer {
+    margin: 10px;
+}
+
+/* #imageid{
+    back
+
+} */

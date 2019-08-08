@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resource/css/main.css">
+    <link rel="stylesheet" href="resource/css/bootstrap.css">
+    <title>Log In</title>
+
+</head>
+
+<body>
+    <header>
+        <p class="logo">Rupkotha</p>
+        <div class="d-flex justify-content-between">
+            <span>
+                <a href="index.html" class="btn btn-outline-primary"><b>Home</b></a>
+                <!-- <a href="#" class="btn btn-outline-primary"><b>Dashboard</b></a> -->
+            </span>
+
+            <span>
+                <!-- <a href="create.html" class="btn btn-danger">New Movement</a> -->
+                <!-- <a href="editor.html" class="btn btn-danger">Editor</a> -->
+            </span>
+            <span>
+                <!-- <a href="login.html" class="btn btn-outline-primary"><b>Log in</b></a> -->
+                <a href="registration.html" class="btn btn-outline-primary"><b> Registration</b></a>
+            </span>
+        </div>
+    </header>
+    <br><br><br>
+
+    <h1 class="text-center alert-danger">You Need to log in to edit</h1>
+    <div class="text-center" id="login">
+        <h3>Log In</h3>
+        <br>
+        <img src="resource/picture/user.png" alt="user">
+        <input type="email" name="email" id="email" placeholder="email" required autocomplete="on">
+        <br>
+        <img src="resource/picture/lock.png" alt="password">
+        <input type="password" name="password" id="password" placeholder="Password (6 digit minimum)" required
+            autocomplete="on">
+        <br>
+        <input type="button" value="log in" class="btn btn-primary" onclick="login()">
+        <p>Need account? <a href="registration.html"> <b>Registration</b></a></p>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
+    <script src="resource/javascript/main.js"></script>
+</body>
+
+</html>
