@@ -37,3 +37,7 @@ section {
 footer {
     margin: 10px;
 }
+
+textarea{
+    font-size: 18px;
+}
