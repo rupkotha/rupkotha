@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="resource/css/main.css">
-    <link rel="stylesheet" href="resource/css/bootstrap.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="../resource/css/bootstrap.css">
     <title>Editor</title>
 </head>
 
 <body onload="initial()">
-    <header>
+    <header class="text-center">
         <p class="logo">Rupkotha</p>
         <div class="d-flex justify-content-between">
             <span>
@@ -128,7 +128,7 @@
     </aside>
 
 
-    <nav id="nav-middle" hidden>
+    <nav id="nav-middle" class="text-center" hidden>
         <div class="input-group mb-3 col-12">
             <b class="form-control text-center alert-danger text">Some Incompleted Pages</b>
         </div>
@@ -164,6 +164,7 @@
     <section>
         <!-- <div class="input-group mb-3 col-sm-11 d-flex justify-content-center"> -->
 
+        <hr>
 
         <div class="input-group mb-3 col-sm-9">
             <b class="form-control">Book ID</b>
@@ -180,6 +181,7 @@
             <button class="btn btn-primary" onclick="goPage()">GO</button>
 
         </div>
+        <hr>
 
         <br><br><br>
 
@@ -203,15 +205,31 @@
     <br><br>
     <main>
 
-        <div class="text-center">
-            <textarea name="text" id="textid" cols="45" rows="5" wrap="soft" spellcheck="on">
-                
-            </textarea>
-        </div>
-        <div class="text-center">
-            <iframe src="" id="imageid" alt="Page Image" height="400" width="350"></iframe>
-        </div>
 
+        </div>
+        <!-- <div class="text-center">
+            <iframe src="" id="imageid" alt="Page Image" height="400" width="370"></iframe>
+        </div> -->
+
+
+        <button class="btn btn-info" onclick="reduceHeight()">-</button>
+        <span>Height</span>
+        <button class="btn btn-info" onclick="increaseHeight()">+</button>
+        <br>
+
+        <button class="btn btn-info" onclick="reduceWidth()">-</button>
+        <span>Width</span>
+        <button class="btn btn-info" onclick="increaseWidth()">+</button>
+        <br>
+
+        <div id="container">
+            <img src="" alt="page" id="imageid">
+
+            <div class="text-center">
+                <textarea name="text" id="textid" cols="45" rows="5" wrap="soft" spellcheck="on">
+            </textarea>
+            </div>
+        </div>
     </main>
 
     <footer class="d-flex justify-content-between">
@@ -234,19 +252,21 @@
 
         <div id="footer-div-right">
 
-            <!-- <div class="input-group mb-3">
+            <div class="input-group mb-3" hidden>
                 <b class="form-control">Version</b>
                 <input type="number" value="" class="form-control" placeholder="Version" id="go-version">
                 <div class="input-group-append">
                     <button class="btn btn-primary" id="version-button" onclick="goVersion()">GO</button>
                 </div>
-            </div> -->
+            </div>
 
 
     </footer>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
-    <script src="resource/javascript/main.js"></script>
+    <script src="mobile.js"></script>
+
+    <br><br>
 </body>
 
 </html>
