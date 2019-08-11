@@ -48,7 +48,7 @@ textarea {
 
 
 #imageid{
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
@@ -74,7 +74,7 @@ textarea {
     /* border: 10px solid #f1f1f1; */
     position: fixed;
     /* Stay fixed */
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
