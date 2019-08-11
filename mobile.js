@@ -324,26 +324,26 @@ function logout() {
 
 function reduceWidth(){
     let image = document.getElementById("imageid");
-    image.style.width = (image.clientWidth - 100) + 'px'
+    image.style.width = (image.clientWidth - 50) + 'px'
 }
 
 function increaseWidth(){
     let image = document.getElementById("imageid");
-    image.style.width = (image.clientWidth + 100) + 'px'
+    image.style.width = (image.clientWidth + 50) + 'px'
 }
 
 function reduceHeight(){
     let image = document.getElementById("imageid");
-    image.style.height = (image.clientHeight - 100) + 'px'
+    image.style.height = (image.clientHeight - 50) + 'px'
 }
 
 function increaseHeight(){
     let image = document.getElementById("imageid");
-    image.style.height = (image.clientHeight + 100) + 'px'
+    image.style.height = (image.clientHeight + 50) + 'px'
 }
 
 function initial() {
-    // isLogin();
+    isLogin();
     bookID = 1;
     book = (10000 + bookID).toString();
 
@@ -360,5 +360,5 @@ function initial() {
     lastpage = 11;
     page = lastpage;
     newPage();
-    // getBookDetails();
+    getBookDetails();
 }
